@@ -23,7 +23,11 @@ export default {
     },
     methods: {
         drawCircle(event) {
-            this.activeCoords.push([event.offsetX, event.offsetY]);
+            const boxLeft = event.target.getBoundingClientRect()?.left
+            const boxTop = event.target.getBoundingClientRect()?.top
+            const clientX = event.clientX;
+            const clientY = event.clientY;
+            this.activeCoords.push([clientX - boxLeft, clientY - boxTop])
         }
     },
 }

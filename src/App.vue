@@ -1,13 +1,16 @@
 <template>
   <div id="app">
+    <VCanvas></VCanvas>
   </div>
 </template>
 
 <script>
-
+import VCanvas from "./components/Canvas.vue"
 export default {
   name: 'App',
-  components: {}
+  components: {
+    VCanvas
+  }
 }
 </script>
 
